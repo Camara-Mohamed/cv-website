@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Métadonnées SEO -->
+    <meta name="description"
+          content="Découvrez mon CV sous forme de site, je suis étudiant en dans le domaine développement web. Consultez mon parcours, mes compétences, mes expériences et plus encore.">
+    <meta name="author" content="Camara Mohamed">
+    <meta name="keywords"
+          content="CV, Web Designer, Développement Web, UX/UI, Portfolio, HTML, CSS, JavaScript, HEPL, Techniques Graphiques">
+
+    <title>CV - Camara Mohamed</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css">
+
+    <!-- Styles -->
+    <script src="./src/js/main.js" type="module" defer></script>
+</head>
+<body>
+<!-- Header (navigation et notification) -->
+<header class="main__header">
+    <h1 role="heading" aria-level="1">
+        <a href="#"><abbr title="Curriculum vitæ">CV</abbr> - Camara Mohamed</a>
+    </h1>
+    <div class="top__nav">
+        <h2 role="heading" aria-level="2">Sous menu</h2>
+        <div class="select__profil">
+            <span>Mon profil</span>
+            <div class="profil__dropdown">
+                <a href="#">Me contacter</a>
+                <a href="#">En savoir plus</a>
+                <a href="#">Mon portfolio</a>
+            </div>
+        </div>
+        <div class="select__status">
+            <label>
+                <select name="status">
+                    <option value="student" selected>Étudiant</option>
+                    <option value="teacher">Professeur</option>
+                    <option value="worker">Professionnel</option>
+                </select>
+            </label>
+        </div>
+        <div class="select__langage">
+            <label>
+                <select name="langage">
+                    <option value="fr" selected><abbr title="Français">FR</abbr></option>
+                    <option value="nl"><abbr title="Néerlandais">NL</abbr></option>
+                    <option value="en"><abbr title="Anglais">EN</abbr></option>
+                    <option value="de"><abbr title="Allemand">DE</abbr></option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <nav class="form__nav">
+        <h2 role="heading" aria-level="2">Navigation formulaire de contact</h2>
+        <ul>
+            <li><a href="#">Présentation</a></li>
+            <li><a href="#">Vos informations personnelles</a></li>
+            <li><a href="#">Détails de votre demande</a></li>
+            <li><a href="#">Validation</a></li>
+            <li>
+                <form class="from__search" method="get" action="" role="search">
+                    <input name="search" placeholder="Recherche" type="search" list="recherche"
+                           title="Entrez votre recherche">
+                    <datalist id="recherche">
+                        <option value="HTML"></option>
+                        <option value="CSS"></option>
+                        <option value="JavaScript"></option>
+                        <option value="UX/UI Design"></option>
+                        <option value="Développement Web"></option>
+                        <option value="Portfolio"></option>
+                        <option value="HEPL"></option>
+                        <option value="Techniques Graphiques"></option>
+                    </datalist>
+                    <input type="submit" value="Rechercher">
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <section class="notification">
+        <div class="notification__content">
+            <h3 role="heading" aria-level="3">Bientôt du nouveau</h3>
+            <p>Je travaille actuellement sur des mises à jour de mon site afin d'y intégrer de nouveaux projets,
+                expériences et compétences. L&apos;objectif est de mieux refléter mon parcours et mes réalisations.
+                Restez
+                connecté pour découvrir les prochaines évolutions&nbsp;!</p>
+            <button class="notification__close">Fermer</button>
+        </div>
+    </section>
+</header>
+
+<section class="hero">
+    <h2 role="heading" aria-level="2">Accueil</h2>
+    <div class="hero__content">
+        <h3 role="heading" aria-level="3">CAMARA Mohamed</h3>
+        <p><abbr title="World Wide Web">Web</abbr> designer</p>
+        <a href="#" class="hero__btn">Contactez-moi</a>
+    </div>
+</section>
+
+<!-- Formulaire de Contact -->
+<section class="form__contact">
+    <h2 role="heading" aria-level="2">Formulaire de contact</h2>
+    <form id="form__contact" action="" method="post">
+        <div class="form__presentation">
+            <p class="form__context">Je suis étudiant en développement web et en techniques graphiques, et je
+                suis à la recherche
+                d'opportunités pour développer de nouvelles compétences et mettre en pratique mes connaissances.</p>
+            <p class="form__wish">Vous souhaitez prendre contact avec moi ? Passez à l'étape suivante pour remplir le
+                formulaire.</p>
+            <button type="button" class="next__step">Suivant</button>
+        </div>
+        <div class="form__step">
+            <label for="lastname">Nom<abbr title="requis">*</abbr></label>
+            <input type="text" id="lastname" name="lastname" required>
+            <label for="firstname">Prénom<abbr title="requis">*</abbr></label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="email">Email<abbr title="requis">*</abbr></label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Numéro de téléphone</label>
+            <input type="number" id="phone" name="phone">
+            <button type="button" class="previous__step">Précédent</button>
+            <button type="button" class="next__step">Suivant</button>
+        </div>
+        <div class="form__step">
+            <label for="message">Message<abbr title="requis">*</abbr></label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="button" class="previous__step">Précédent</button>
+            <button type="submit" class="no-js">Envoyer</button>
+            <button type="button" class="next__step">Suivant</button>
+        </div>
+        <div class="form__step validation__step">
+            <p>Nom :<span id="value__name"></span></p>
+            <p>Email :<span id="value__email"></span></p>
+            <p>Numéro de téléphone :<span id="value__phone"></span></p>
+            <p>Message :<span id="value__message"></span></p>
+            <button type="button" class="previous__step">Précédent</button>
+            <button type="submit">Envoyer</button>
+        </div>
+    </form>
+</section>
+
+<!-- Expériences professionnelles -->
+<section class="experience">
+    <h2 role="heading" aria-level="2">Mes expériences professionnelles</h2>
+    <div class="experience__dropdown">
+        <details>
+            <summary>Carrefour Market,<br>Belle-Ile</summary>
+            <div class="dropdown__content">
+                <h3>Carrefour Market, Belle-Ile <span>(avril – mai 2023)</span></h3>
+                <p>De mars à juin 2023, puis de septembre 2023 à novembre 2024, je faisais le réassort au Carrefour
+                    Market de Belle-Île (8 à 20 h/semaine). Mon horaire variait selon mes disponibilités et celles du
+                    magasin, avec des plages plus longues durant les vacances. En autonomie, je scannais un QR code pour
+                    enregistrer mes heures.
+
+                    J'étais assigné au rayon épicerie, je remplissais les rayons et j'assurais le "niveling" dans tout
+                    le magasin. Je travaillais souvent avec une collègue et le manager, on se relayait sur certaines
+                    tâches, surtout en service du soir.</p>
+                <a href="#" class="experience__link">
+                    <button type="button">En savoir plus</button>
+                </a>
+            </div>
+        </details>
+        <details>
+            <summary>Humans Technology, <br>Fléron</summary>
+            <div class="dropdown__content">
+                <h3><span></span></h3>
+                <p></p>
+                <a href="#" class="experience__link">
+                    <button type="button">En savoir plus</button>
+                </a>
+            </div>
+        </details>
+        <details>
+            <summary>Latitude Jeune,<br> Liège</summary>
+            <div class="dropdown__content">
+                <h3>Latitude Jeune, Liège <span>(septembre 2021 - septembre 2023)</span></h3>
+                <p>Durant cette expérience, j'ai dû encadrer des jeunes en organisant des activités, gérer leurs
+                    repas, mais aussi m'assurer de répondre à leurs besoins. Je m'occupais également du rangement de
+                    l'espace de jeu ou de repos, de la remise en place du matériel, et je veillais à maintenir un
+                    environnement propre et ordonné. Mon objectif était de garantir un cadre agréable et sécurisé pour
+                    les jeunes.
+
+                    Les journées se déroulaient généralement de 8h à 18h, mais il arrivait parfois que nous restions
+                    plus tard pour ranger les dernières petites choses, notamment lors du dernier jour ou lorsque
+                    nous devions attendre que les derniers parents viennent récupérer leurs enfants. L'accueil de
+                    vacances se faisait pendant les vacances scolaires, et j'avais aussi la possibilité de rejoindre
+                    l'école des devoirs pour aider les jeunes.</p>
+                <a href="#" class="experience__link">
+                    <button type="button">En savoir plus</button>
+                </a>
+            </div>
+        </details>
+        <details>
+            <summary>Été Solidaire,<br> Wandre</summary>
+            <div class="dropdown__content">
+                <h3>Été Solidaire, Wandre <span>(juillet – aout 2021)</span></h3>
+                <p></p>
+                <a href="#" class="experience__link">
+                    <button type="button">En savoir plus</button>
+                </a>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- Outils -->
+<section class="tools">
+    <h2 role="heading" aria-level="2">Mes outils</h2>
+    <div class="tools__content">
+        <p class="tools__description">À travers mon travail, j'utilise divers outils tels que Figma, PhpStorm, Herd,
+            DataGrip, GitHub Desktop, Notion, et bien d'autres. Ces outils me permettent de gérer efficacement mes
+            projets, de collaborer avec mes équipes et d'assurer une gestion optimale des tâches et du code.</p>
+    </div>
+    <div class="tools__cards">
+        <div class="tools__card">
+            <div class="tools__icon">
+            </div>
+            <div class="tools__content">PhPStorm</div>
+        </div>
+        <div class="tools__card">
+            <div class="tools__icon">
+            </div>
+            <div class="tools__content">Figma</div>
+        </div>
+        <div class="tools__card">
+            <div class="tools__icon">
+            </div>
+            <div class="tools__content">Herd</div>
+        </div>
+    </div>
+</section>
+
+<!-- Soft Skills -->
+<section class="soft__skills">
+    <h2 role="heading" aria-level="2">Mes soft skills</h2>
+    <div class="skills__content">
+        <p class="skills__description">Au cours de mon parcours de vie et de mes années à l'école, j'ai acquis plusieurs
+            compétences, telles que l'autonomie, le travail en équipe, et l'apprentissage par moi-même. Ces compétences
+            m'ont permis de développer une grande capacité à gérer diverses situations et à m'adapter aux défis.</p>
+    </div>
+    <div class="skills__grid">
+        <div class="skill__card">
+            <h3>Autonomie</h3>
+        </div>
+        <div class="skill__card">
+            <h3>Polyvalence</h3>
+        </div>
+        <div class="skill__card">
+            <h3>Travail en équipe</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Compétences techniques -->
+<section class="langages">
+    <h2 role="heading" aria-level="2">Mes langages</h2>
+    <div class="langages__grid">
+        <div class="langages__card">
+            <img src="#" alt="HTML">
+            <h3><abbr title="">HTML</abbr></h3>
+            <p>Le langage de structuration essentiel pour le web.</p>
+            <a href="#">Organisez votre contenu avec des balises adaptées.</a>
+        </div>
+        <div class="langages__card">
+            <img src="#" alt="CSS">
+            <h3><abbr title="">CSS</abbr></h3>
+            <p>Le langage de style qui donne vie aux pages web.</p>
+            <a href="#">Personnalisez l’apparence avec des styles adaptés.</a>
+        </div>
+        <div class="langages__card">
+            <img src="#" alt="JavaScript">
+            <h3><abbr title="">JavaScript</abbr></h3>
+            <p>Le langage qui rend les pages web interactives.</p>
+            <a href="#">Améliorez l'expérience avec des fonctionnalités dynamiques.</a>
+        </div>
+    </div>
+</section>
+
+<!-- Établissement scolaire -->
+<section class="school">
+    <h2 role="heading" aria-level="2">Haute École de la Province de Liège</h2>
+    <div class="school__informations">
+        <h3 role="heading" aria-level="3">Haute École de la Province de Liège
+            <span>(Actuellement en 2ᵉ année)</span></h3>
+        <p><span>Baccalauréat en Techniques Graphiques, option Web</span>
+            Cette formation couvre les bases du développement web avec HTML, CSS, JavaScript, PHP et MySQL. Elle inclut
+            également l'utilisation de Figma pour le design et le prototypage d'interfaces.</p>
+        <a href="#" class="school__btn">En savoir plus</a>
+    </div>
+</section>
+
+<!-- Formation -->
+<section class="education">
+    <h2 role="heading" aria-level="2">Mes Formations</h2>
+    <div class="education__grid">
+        <div class="education__card">
+            <h3 role="heading" aria-level="3">Premiers secours (2022)</h3>
+        </div>
+        <div class="education__card">
+            <h3 role="heading" aria-level="3">Animateur (2023)</h3>
+        </div>
+        <div class="education__card">
+            <h3 role="heading" aria-level="3">Pompier volontaire (En cours)</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Établissement scolaire -->
+<section class="school">
+    <h2 role="heading" aria-level="2">Centre Scolaire Sainte Julienne</h2>
+    <div class="school__informations">
+        <h3 role="heading" aria-level="3">Centre Scolaire Sainte Julienne -
+            <span>(Actuellement en 2ᵉ année)</span></h3>
+        <p><span>Certificat d'enseignement secondaire supérieur, Technique de transition option informatique</span>
+            Cette formation allie développement web (HTML, CSS), techniques graphiques et une base solide en maths,
+            sciences, géographie, langues et histoire.</p>
+        <a href="#" class="school__btn">En savoir plus</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <h2>Pied de page - Navigation</h2>
+
+    <div class="footer__top">
+        <h3>Consulter la version mobile</h3>
+        <div class="store__buttons">
+            <a href="#"><img src="#" alt="Google Play"></a>
+            <a href="#"><img src="#" alt="App Store"></a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__contact">
+            <h4>Me contacter</h4>
+            <ul>
+                <li><a href="#">Présentation</a></li>
+                <li><a href="#">Vos informations personnelles</a></li>
+                <li><a href="#">Détails de votre demande</a></li>
+                <li><a href="#">Validation</a></li>
+            </ul>
+        </div>
+        <div class="footer__navigation">
+            <h4>Mon parcours</h4>
+            <ul>
+                <li><a href="#">Mes expériences professionnelles</a></li>
+                <li><a href="#">Mes coordonnées</a></li>
+                <li><a href="#">Mes outils</a></li>
+                <li><a href="#">Mes soft skills</a></li>
+                <li><a href="#">Mes langages</a></li>
+                <li><a href="#">Mes formations</a></li>
+            </ul>
+        </div>
+        <div class="footer__social">
+            <h4>Suivez-moi sur</h4>
+            <ul>
+                <li><a href="#"><img src="#" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="#" alt="GitHub"></a></li>
+            </ul>
+        </div>
+        <div class="footer__plus">
+            <h4>Plus</h4>
+            <ul>
+                <li><a href="#"><img src="#" alt="HEPL"></a></li>
+                <li><a href="#"><img src="#" alt="Bpost"></a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="copyright">Copyright © 2024-2025 Camara Mohamed</p>
+</footer>
+
+</body>
+</html>
