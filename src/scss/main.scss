@@ -1,5 +1,17 @@
 @use "base/reset";
-
 @use 'base/variables';
+@use 'base/typography';
+@use 'base/breakpoints';
+
 @use 'components/header';
 @use 'components/footer';
+
+@use 'sections/contact';
+@use 'sections/coordinate';
+@use 'sections/experience';
+@use 'sections/formation';
+@use 'sections/hero';
+@use 'sections/langage';
+@use 'sections/notification';
+@use 'sections/school';
+@use 'sections/skill';
