@@ -53,8 +53,38 @@ table {
   border-spacing: 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--font-family-base), sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.skip__link {
+  position: absolute;
+  left: -10000px;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--color-red);
+  border: none;
+  z-index: 100;
+  padding: 0.5em 1em;
+  transition: top 0.3s ease;
+}
+.skip__link:focus {
+  position: static;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: none;
+  width: auto;
+  height: auto;
 }
 
 :root {
