@@ -8,4 +8,65 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+
+  /* Basics colors */
+  --white : #FFFFFF;
+  --black : #000000;
+
+  /* Colors */
+  --color-red : #EF2637;
+  --color-blue : #4195B9;
+  --color-green : #66A367;
+  --color-gray : #495057;
+  --color-medium-gray : #5A5A5F;
+  --color-light-gray : #717176;
+
+  /* Some Colors */
+  --color-black-10: rgba(0, 0, 0, 0.1);
+  --color-black-20: rgba(0, 0, 0, 0.2);
+  --color-black-30: rgba(0, 0, 0, 0.3);
+
+  /* Border Weight */
+  --border-weight-soft: 1;
+  --border-weight-light: 2;
+  --border-weight-medium-light: 4;
+  --border-weight-medium: 6;
+  --border-weight-strong: 8;
+
+  /* Gradient Colors */
+  --grad-color-0: rgba(0, 0, 0, 0);
+  --grad-color-30: rgba(0, 0, 0, 0.3);
+  --grad-color-60: rgba(0, 0, 0, 0.6);
+  --grad-color-80: rgba(0, 0, 0, 0.8);
+
+  /* Gradient Direction */
+  --grad-direction-r: to right;
+  --grad-direction-b: to bottom;
+
+  /* Gradient Construction */
+  --grad-hero: linear-gradient(
+                  var(--grad-direction-r),
+                  var(--grad-color-80) 0%,
+                  var(--grad-color-30) 70%,
+                  var(--grad-color-0) 100%
+  );
+
+  --grad-skill: linear-gradient(
+                  var(--grad-direction-b),
+                  var(--grad-color-0) 0%,
+                  var(--grad-color-30) 30%,
+                  var(--grad-color-80) 80%
+  );
+
+  --grad-school: linear-gradient(
+                  var(--grad-direction-b),
+                  var(--grad-color-0) 0%,
+                  var(--grad-color-30) 30%,
+                  var(--grad-color-60) 60%,
+                  var(--grad-color-0) 100%
+  );
+
+  /* Box Shadow Construction */
+  --box-shadow: 0 4px 12px 0px var(--color-black-10);
+  --box-shadow-hover: 0 6px 18px -2px var(--color-black-20);
 }
